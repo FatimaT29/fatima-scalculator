@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fatima's Calculator</title>
+</head>
+<link rel="stylesheet" href="calculator.css">
+<body>
+  <div align ="center" class="om">
+  <h1> Calculator</h1>
+  <!-- <br> -->
+  <div class="container">
+  
+    <input  class="input" type="text" id="inputBox">
+  
+  
+  <div class="num" id="small" >
+    <button class="button" onclick="AllClear()">AC</button>
+     <button class="button" onclick="del()">DEL</button>
+      <button class="button" onclick="calculat('%')">%</button>
+       <button class="button" onclick="operator('/')">/</button>
+  </div>
+  <div class="num">
+    <button class="button" onclick="calculat(7)">7</button>
+     <button class="button" onclick="calculat(8)">8</button>
+      <button class="button" onclick="calculat(9)">9</button>
+       <button class="button" onclick="operator('*')">*</button>
+  </div>
+  <div class="num">
+    <button class="button" onclick="calculat(4)">4</button>
+     <button class="button" onclick="calculat(5)">5</button>
+      <button class="button" onclick="calculat(6)">6</button>
+       <button class="button" onclick="operator('-')">-</button>
+  </div>
+  <div class="num">
+    <button class="button" onclick="calculat(1)">1</button>
+     <button class="button" onclick="calculat(2)">2</button>
+      <button class="button" onclick="calculat(3)">3</button>
+       <button class="button" onclick="operator('+')">+</button>
+  </div>
+   <div class="num">
+    <button class="button"  onclick="calculat('00')">00</button>
+     <button class="button" onclick="calculat(0)">0</button>
+      <button class="button" onclick="calculat('.')">.</button>
+       <button class="Equal" onclick="equal()">=</button>
+  </div>
+</div>
+</div>
+  <script>
+let result = document.getElementById('inputBox');
+// let buttons = document.querySelectorAll('.button');
+let count = 0;
+function operator(num){
+  if(count==0)
+result.value += num;
+count=1;
+}
+
+
+
+function calculat(num){
+result.value += num;
+count=0;
+}
+
+function equal(){
+  result.value = eval(result.value);
+}
+
+
+function AllClear(){
+  result.value = ""
+}
+function del(){
+  // result.value =result.value.slice(0,-1)
+  result.value =result.value.substring(0, result.value.length-1)
+  count=0
+}
+
+
+
+  </script>
+</body>
+</html>
