@@ -1,0 +1,78 @@
+/* Body Styling */
+body {
+  background-color: rgb(255, 244, 244);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Enable vertical centering */
+  user-select: none;
+  margin: 0;
+}
+
+/* Calculator Container */
+.container {
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Input Display */
+.input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  text-align: right;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/* Buttons */
+.button,
+.Equal {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: none;
+  margin: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 8px aquamarine;
+  transition: transform 0.2s ease;
+}
+
+/* Button Colors */
+.button {
+  background-color: darkturquoise;
+}
+
+.Equal {
+  background-color: aqua;
+}
+
+/* Hover Effects */
+.button:hover,
+.Equal:hover {
+  transform: scale(1.1);
+}
+
+/* Small Text Button */
+#small {
+  font-size: 11px;
+}
+
+/* Grid for Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.button, .Equal {
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5),
+              inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
